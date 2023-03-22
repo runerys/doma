@@ -63,6 +63,12 @@
           hsc('<br />').
           join(", ", $atoms2);
         $item["PubDate"] = hsc(date("r", Helper::StringToTime($map->CreatedTime, true)));
+
+        // extra parameter for tense display
+        if($_GET["nameonly"] === '1')
+        {
+             $item["Description"] = hsc($user->FirstName ." ". $user->LastName);
+        }
         $viewData["Items"][] = $item;
       }
 
