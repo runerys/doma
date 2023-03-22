@@ -63,8 +63,9 @@
     print '</p>';
   }
 
-  if(!Helper::IsLoggedInAdmin() && PUBLIC_USER_CREATION_CODE) print '<p>'. __("PUBLIC_CREATE_USER_INFO") .'</p>';
-
+  print '<p>Klubbens løpere kan lage seg bruker ved å følge instruksjonene på <a href="http://nydalen.idrett.no/orientering/kartarkiv/">http://nydalen.idrett.no/orientering/kartarkiv/</a></p>';
+  //if(!Helper::IsLoggedInAdmin() && PUBLIC_USER_CREATION_CODE) print '<p>'. __("PUBLIC_CREATE_USER_INFO") .'</p>';
+  
   if(count($vd["Users"]) > 0)
   {
 ?>
